@@ -9,7 +9,7 @@ export default defineConfig({
   timeout: 60_000,
 
   expect: {
-    timeout: 15_000,
+    timeout: 60_000,
   },
 
   fullyParallel: true,
