@@ -1,0 +1,32 @@
+# Automatización
+
+Suite de pruebas con Playwright + TypeScript (Page Object Model)
+sobre https://demoqa.com/automation-practice-form
+
+## Casos automatizados
+- Flujo exitoso (todos los campos / solo obligatorios)
+- Selección múltiple de hobbies
+- Validación de obligatorios vacíos (nombre, apellido, género, mobile)
+- Mobile inválido, email inválido
+- City deshabilitado sin State
+
+## Cómo ejecutar
+npm ci
+npx playwright install chromium
+npx playwright test
+npx playwright show-report
+
+## Estructura
+- pages/: Page Objects
+- data/: datos de prueba
+- tests/: specs
+- fixture/: archivos de prueba
+
+## Integración con GitHub Actions
+El workflow `.github/workflows/playwright.yml` ejecuta la suite en cada push
+y publica el reporte HTML como artifact.
+
+**Nota:** al ejecutarse desde los runners de GitHub, demoqa.com devuelve una
+página en blanco (verificado con trace y screenshots), por lo que los tests
+fallan en el CI aunque pasan en ejecución local. Se adjunta evidencia de
+ambas ejecuciones.
