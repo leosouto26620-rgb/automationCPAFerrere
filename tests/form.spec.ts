@@ -195,7 +195,7 @@ test.describe("Casos Negativos", () => {
     await form.clickSubmitBtn();
     await expect(page.locator('input[name="gender"]:invalid')).toHaveCount(3);
   });
-  test("TC11 - Verificar campo city deshabilitado", async ({ page }) => {
+  test("TC12 - Verificar campo city deshabilitado", async ({ page }) => {
     const form = new FormPage(page);
     await form.goto("/automation-practice-form");
     await expect(
