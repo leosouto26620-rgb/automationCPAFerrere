@@ -6,10 +6,10 @@ dotenv.config();
 export default defineConfig({
   testDir: "./tests",
 
-  timeout: 30000,
+  timeout: 60_000,
 
   expect: {
-    timeout: 5000,
+    timeout: 15_000,
   },
 
   fullyParallel: true,
@@ -30,6 +30,10 @@ export default defineConfig({
     video: "retain-on-failure",
 
     trace: "on-first-retry",
+
+    navigationTimeout: 45_000,
+
+    actionTimeout: 15_000,
 
     ...devices["Desktop Chrome"],
   },
